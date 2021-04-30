@@ -9,24 +9,31 @@ namespace UserRegistration_MSTest
     {
         Pattern pattern = new Pattern();
         [TestMethod]
-        public void TestValidateFirstName()
+        public void TestFirstName()
         { 
             bool result = pattern.ValidateFirstName("Shubham");
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void TestValidateLastName()
+        public void TestLastName()
         {
             bool result1 = pattern.ValidateLastName("Bodake");
             Assert.IsTrue(result1);
         }
 
         [TestMethod]
-        public void TestValidateEmail()
+        public void TestEmail()
         {
             bool result2 = pattern.ValidateEmail("Shubham@gmail.com");
             Assert.IsTrue(result2);
+        }
+
+        [TestMethod]
+        public void TestMobileNumber()
+        {
+            bool result3 = pattern.ValidateMobileNumber("91 7757929383");
+            Assert.IsTrue(result3);
         }
     }
 }
