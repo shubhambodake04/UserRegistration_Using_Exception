@@ -14,9 +14,10 @@ namespace UserRegistration_Using_Exception
             Pattern pattern = new Pattern();
             bool result = pattern.ValidateFirstName("Shubham");
             bool result1 = pattern.ValidateLastName("Bodake");
-            bool result2 = pattern.ValidateLastName("Shubham@gmail.com");
-            bool result3 = pattern.ValidateLastName("91 7757929383");
-            bool result4 = pattern.ValidateLastName("Shubhambodake");
+            bool result2 = pattern.ValidateEmail("Shubham@gmail.com");
+            bool result3 = pattern.ValidateMobileNumber("91 7757929383");
+            bool result4 = pattern.ValidatePasswordRule1("shubhambodake");
+            bool result5 = pattern.ValidatePasswordRule2("Shubhambodake");
             try
             { 
                 if(result != true)
@@ -25,10 +26,36 @@ namespace UserRegistration_Using_Exception
                 }
 
                 Console.WriteLine(result);
+
+                if (result1 != true)
+                {
+                    throw new Exception("Input string is not in correct format");
+                }
                 Console.WriteLine(result1);
+
+                if (result2 != true)
+                {
+                    throw new Exception("Input string is not in correct format");
+                }
                 Console.WriteLine(result2);
+
+                if (result3 != true)
+                {
+                    throw new Exception("Input string is not in correct format");
+                }
                 Console.WriteLine(result3);
+
+                if (result4 != true)
+                {
+                    throw new Exception("Input string is not in correct format");
+                }
                 Console.WriteLine(result4);
+
+                if (result5 != true)
+                {
+                    throw new Exception("Input string is not in correct format");
+                }
+                Console.WriteLine(result5);
 
             }
             catch(Exception e)

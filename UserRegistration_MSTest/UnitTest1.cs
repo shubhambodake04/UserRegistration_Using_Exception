@@ -10,7 +10,7 @@ namespace UserRegistration_MSTest
         Pattern pattern = new Pattern();
         [TestMethod]
         public void TestFirstName()
-        { 
+        {
             bool result = pattern.ValidateFirstName("Shubham");
             Assert.IsTrue(result);
         }
@@ -39,8 +39,15 @@ namespace UserRegistration_MSTest
         [TestMethod]
         public void TestPasswordRule1()
         {
-            bool result4 = pattern.ValidateLastName("Shubhambodake");
+            bool result4 = pattern.ValidatePasswordRule1("shubhambodake");
             Assert.IsTrue(result4);
+        }
+
+        [TestMethod]
+        public void TestPasswordRule2()
+        {
+            bool result5 = pattern.ValidatePasswordRule2("Shubhambodake");
+            Assert.IsTrue(result5);
         }
     }
 }
