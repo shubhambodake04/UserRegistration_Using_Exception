@@ -35,5 +35,12 @@ namespace UserRegistration_MSTest
             bool result3 = pattern.ValidateMobileNumber("91 7757929383");
             Assert.IsTrue(result3);
         }
+
+        [TestMethod]
+        public void TestPasswordRule1()
+        {
+            bool result4 = pattern.ValidateLastName("Shubhambodake");
+            Assert.IsTrue(result4);
+        }
     }
 }
