@@ -12,9 +12,8 @@ namespace UserRegistration_Using_Exception
         {
 
             Pattern pattern = new Pattern();
-            bool result = pattern.ValidateFirstName("");
-            
-
+            bool result = pattern.ValidateFirstName("Shubham");
+            bool result1 = pattern.ValidateLastName("Bodake");
             try
             { 
              if(result != true)
@@ -23,7 +22,8 @@ namespace UserRegistration_Using_Exception
                 }
 
              Console.WriteLine(result);
-            
+             Console.WriteLine(result1);
+
             }
             catch(Exception e)
             {
