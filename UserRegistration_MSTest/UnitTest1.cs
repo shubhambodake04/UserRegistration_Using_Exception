@@ -49,5 +49,6 @@ namespace UserRegistration_MSTest
             bool result5 = pattern.ValidatePasswordRule2("Shubhambodake");
             Assert.IsTrue(result5);
         }
+
     }
 }

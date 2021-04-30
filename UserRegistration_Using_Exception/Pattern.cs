@@ -39,5 +39,6 @@ namespace UserRegistration_Using_Exception
         {
             return Regex.IsMatch(input, PASSWORDRULE2);
         }
+
     }
 }
