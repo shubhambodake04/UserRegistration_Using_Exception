@@ -50,5 +50,12 @@ namespace UserRegistration_MSTest
             Assert.IsTrue(result5);
         }
 
+        [TestMethod]
+        public void TestPasswordRule3()
+        {
+            bool result6 = pattern.ValidatePasswordRule3("Shubham@6476");
+            Assert.IsTrue(result6);
+        }
+
     }
 }

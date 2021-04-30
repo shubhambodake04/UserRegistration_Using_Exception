@@ -18,6 +18,7 @@ namespace UserRegistration_Using_Exception
             bool result3 = pattern.ValidateMobileNumber("91 7757929383");
             bool result4 = pattern.ValidatePasswordRule1("shubhambodake");
             bool result5 = pattern.ValidatePasswordRule2("Shubhambodake");
+            bool result6 = pattern.ValidatePasswordRule2("");
             try
             { 
                 if(result != true)
@@ -57,6 +58,11 @@ namespace UserRegistration_Using_Exception
                 }
                 Console.WriteLine(result5);
 
+                if (result6 != true)
+                {
+                    throw new Exception("Input string is not in correct format");
+                }
+                Console.WriteLine(result6);
             }
             catch(Exception e)
             {

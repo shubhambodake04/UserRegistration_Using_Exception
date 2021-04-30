@@ -15,6 +15,8 @@ namespace UserRegistration_Using_Exception
         public string MOBILENUMBER = "^[0-9]{2}[ ][1-9][0-9]{9}$";
         public string PASSWORDRULE1 = "^[a-zA-Z]{8,}$";
         public string PASSWORDRULE2 = "^[A-Z]+[a-zA-Z]{8,}$";
+        public string PASSWORDRULE3 = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}$";
+
         public bool ValidateFirstName(string input)
         {
             return Regex.IsMatch(input, FIRSTNAME);
@@ -39,6 +41,9 @@ namespace UserRegistration_Using_Exception
         {
             return Regex.IsMatch(input, PASSWORDRULE2);
         }
-
+        public bool ValidatePasswordRule3(string input)
+        {
+            return Regex.IsMatch(input, PASSWORDRULE3);
+        }
     }
 }
