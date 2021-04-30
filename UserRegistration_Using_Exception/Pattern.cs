@@ -11,6 +11,7 @@ namespace UserRegistration_Using_Exception
     {
         public string FIRSTNAME = "^[A-Z][a-z]{2,}$";
         public string LASTNAME = "^[A-Z][a-z]{2,}$";
+        public string EMAIL = "^[a-z0-9A-Z]+([._+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
 
         public bool ValidateFirstName(string input)
         {
@@ -19,6 +20,10 @@ namespace UserRegistration_Using_Exception
         public bool ValidateLastName(string input)
         {
             return Regex.IsMatch(input, LASTNAME);
+        }
+        public bool ValidateEmail(string input)
+        {
+            return Regex.IsMatch(input, EMAIL);
         }
     }
 }

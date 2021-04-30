@@ -18,8 +18,15 @@ namespace UserRegistration_MSTest
         [TestMethod]
         public void TestValidateLastName()
         {
-            bool result = pattern.ValidateLastName("Bodake");
-            Assert.IsTrue(result);
+            bool result1 = pattern.ValidateLastName("Bodake");
+            Assert.IsTrue(result1);
+        }
+
+        [TestMethod]
+        public void TestValidateEmail()
+        {
+            bool result2 = pattern.ValidateEmail("Shubham@gmail.com");
+            Assert.IsTrue(result2);
         }
     }
 }

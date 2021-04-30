@@ -14,15 +14,17 @@ namespace UserRegistration_Using_Exception
             Pattern pattern = new Pattern();
             bool result = pattern.ValidateFirstName("Shubham");
             bool result1 = pattern.ValidateLastName("Bodake");
+            bool result2 = pattern.ValidateLastName("Shubham@gmail.com");
             try
             { 
-             if(result != true)
+                if(result != true)
                 {
                     throw new Exception("Input string is not in correct format");
                 }
 
-             Console.WriteLine(result);
-             Console.WriteLine(result1);
+                Console.WriteLine(result);
+                Console.WriteLine(result1);
+                Console.WriteLine(result2);
 
             }
             catch(Exception e)
